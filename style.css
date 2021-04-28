@@ -1,0 +1,66 @@
+#choice {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  font-family: "Kalam", cursive;
+}
+
+#list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1% 2%;
+}
+
+.menu {
+  display: flex;
+  flex-flow: column;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.list-btn {
+  background: none;
+  border: none;
+  margin: 0;
+}
+
+img {
+  width: 100px;
+}
+.spcl {
+  width: 100px;
+}
+
+#result {
+  width: 100%;
+  text-align: center;
+  font-family: "Kalam", cursive;
+}
+
+#result-display {
+  margin: 0 0 1em;
+  font-size: 4em;
+}
+
+.list-label {
+  font-size: 2em;
+  font-family: "Bree Serif", serif;
+}
+
+@media only screen and (max-width: 450px) {
+  #result-display {
+    font-size: 3em;
+  }
+  .list-label {
+    font-size: 1.5em;
+  }
+  img {
+    width: 80px;
+  }
+  .spcl {
+    width: 80px;
+  }
+  .menu {
+    margin: 0 0 0.8em;
+  }
+}

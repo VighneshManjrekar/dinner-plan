@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon (1).ico" rel="icon">
+    <title>What to make for dinner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kalam&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="choice">
+        <h1>आज कोणती भाजी करू?</h1>
+        <div id="list">
+            <div class="menu">
+                <button class="list-btn" onclick="vegShuffle()"><img src="images/veg.png" class="veg"></button>
+                <p class="list-label veg-label">Veg</p>
+            </div>
+            <div class="menu">
+                <button class="list-btn" onclick="nonVegShuffle()"><img src="images/non-veg.png"
+                        class="non-veg"></button>
+                <p class="list-label veg-label">NonVeg</p>
+            </div>
+            <div class="menu">
+                <button class="list-btn" onclick="spclShuffle()"><img src="images/spcl.png" class="spcl"></button>
+                <p class="list-label veg-label">Special</p>
+            </div>
+        </div>
+    </section>
+    <section id="result">
+        <h4 id="result-display"></h4>
+    </section>
+</body>
+
+<script>
+    var veg = ["चणा", "राजमा", "वांग", "टोमॅटो", "बटाटा", "शिमला मिरची ", "भेंडी", "शेवगा"]
+    var nonVeg = ["Chicken", "Fish", "Egg"]
+    var spcl = ["पनीर", "छोले"]
+
+    function vegShuffle() {
+        var ran = Math.floor(Math.random() * veg.length)
+        document.getElementById("result-display").innerHTML =
+            veg[ran]
+    }
+
+    function nonVegShuffle() {
+        var ran = Math.floor(Math.random() * nonVeg.length)
+        document.getElementById("result-display").innerHTML =
+            nonVeg[ran]
+    }
+
+    function spclShuffle() {
+        var ran = Math.floor(Math.random() * spcl.length)
+        document.getElementById("result-display").innerHTML =
+            spcl[ran]
+    }
+
+</script>
+
+</html>
