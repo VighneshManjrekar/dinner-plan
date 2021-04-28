@@ -1,0 +1,74 @@
+/* Choice section */
+#choice {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  font-family: "Kalam", cursive;
+}
+#list {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0.5em;
+}
+.menu {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+.list-btn {
+  background: none;
+  border: none;
+  margin: 0;
+}
+img {
+  width: 80px;
+}
+.list-label {
+  font-size: 1.5em;
+  font-family: "Bree Serif", serif;
+}
+
+/* Result Section */
+#result {
+  width: 100%;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  margin-bottom: 1em;
+  display: none;
+}
+#result-display {
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: 2.3em;
+}
+.btn {
+  font-size: 1em;
+  margin: auto;
+  font-family: "Bree Serif", serif;
+  border-radius: 0.6em;
+  border: none;
+  background-color: tomato;
+  color: white;
+  width: 50px;
+  padding: 0.5em;
+}
+
+@media only screen and (min-width: 600px) {
+  #choice {
+    padding: 0 10%;
+  }
+  img {
+    width: 100px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .btn {
+    font-size: 1.8em;
+    width: 100px;
+    padding: 0.2em;
+  }
+  #result-display {
+    font-size: 2.8em;
+  }
+}

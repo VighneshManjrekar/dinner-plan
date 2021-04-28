@@ -6,105 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="images/favicon (1).ico" rel="icon">
     <title>What to make for dinner</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kalam&display=swap" rel="stylesheet">
 </head>
-
-<style>
-    #choice {
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        font-family: "Kalam", cursive;
-    }
-
-    #list {
-        display: flex;
-        justify-content: space-evenly;
-        padding: 1% 2%;
-    }
-
-    .menu {
-        display: flex;
-        flex-flow: column;
-        margin: 0 0 1em;
-        text-align: center;
-    }
-
-    .list-btn {
-        background: none;
-        border: none;
-        margin: 0;
-    }
-
-    img {
-        width: 100px;
-    }
-
-    .spcl {
-        width: 100px;
-    }
-
-    #result {
-        width: 100%;
-        text-align: center;
-        font-family: "Kalam", cursive;
-    }
-
-    #result-display {
-        margin: 0 0 1em;
-        font-size: 4em;
-    }
-
-    .list-label {
-        font-size: 2em;
-        font-family: "Bree Serif", serif;
-    }
-
-    @media only screen and (max-width: 450px) {
-        #result-display {
-            font-size: 3em;
-        }
-
-        .list-label {
-            font-size: 1.5em;
-        }
-
-        img {
-            width: 80px;
-        }
-
-        .spcl {
-            width: 80px;
-        }
-
-        .menu {
-            margin: 0 0 0.8em;
-        }
-    }
-</style>
 
 <body>
     <section id="choice">
         <h1>आज कोणती भाजी करू?</h1>
         <div id="list">
             <div class="menu">
-                <button class="list-btn" onclick="vegShuffle()"><img src="images/veg.png" class="veg"></button>
+                <button class="list-btn" onclick="vegShuffle()"><img src="images/veg.png" class="veg-img"></button>
                 <p class="list-label veg-label">Veg</p>
             </div>
             <div class="menu">
                 <button class="list-btn" onclick="nonVegShuffle()"><img src="images/non-veg.png"
-                        class="non-veg"></button>
+                        class="non-veg-img"></button>
                 <p class="list-label veg-label">NonVeg</p>
             </div>
             <div class="menu">
-                <button class="list-btn" onclick="spclShuffle()"><img src="images/spcl.png" class="spcl"></button>
+                <button class="list-btn" onclick="spclShuffle()"><img src="images/spcl.png" class="spcl-img"></button>
                 <p class="list-label veg-label">Special</p>
             </div>
         </div>
     </section>
     <section id="result">
         <h4 id="result-display"></h4>
+        <button onclick="window.location.reload()" class="btn">Ok</button>
     </section>
 </body>
 
@@ -117,18 +45,21 @@
         var ran = Math.floor(Math.random() * veg.length)
         document.getElementById("result-display").innerHTML =
             veg[ran]
+        document.getElementById("result").style.display = "block"
     }
 
     function nonVegShuffle() {
         var ran = Math.floor(Math.random() * nonVeg.length)
         document.getElementById("result-display").innerHTML =
             nonVeg[ran]
+        document.getElementById("result").style.display = "block"
     }
 
     function spclShuffle() {
         var ran = Math.floor(Math.random() * spcl.length)
         document.getElementById("result-display").innerHTML =
             spcl[ran]
+        document.getElementById("result").style.display = "block"
     }
 
 </script>
